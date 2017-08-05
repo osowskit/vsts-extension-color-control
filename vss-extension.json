@@ -1,10 +1,10 @@
 {
     "manifestVersion": 1,
-    "id": "color-form-control",
-    "version": "1.0.3",
-    "name": "Color picklist control",
-    "description": "Add custom colors and labels for picklist fields.",
-    "publisher": "ms-devlabs",
+    "id": "microsoft-github-app-extension",
+    "version": "1.0.8",
+    "name": "GitHub App Extension",
+    "description": "Create GitHub branches from VSTS.",
+    "publisher": "osowskit",
     "icons": {
         "default": "img/logo.png"
     },
@@ -26,37 +26,25 @@
     },
     "repository": {
         "type": "git",
-        "uri": "https://github.com/Microsoft/vsts-extension-color-control"
+        "uri": "https://github.com/osowskit/microsoft-github-app-extension"
     },
     "links": {
         "learn": {
-            "uri": "https://github.com/Microsoft/vsts-extension-color-control/blob/master/README.md"
+            "uri": "https://github.com/osowskit/microsoft-github-app-extension/blob/master/README.md"
         },
         "support": {
-            "uri": "https://github.com/Microsoft/vsts-extension-color-control"
+            "uri": "https://github.com/osowskit/microsoft-github-app-extension"
         },
         "repository": {
-            "uri": "https://github.com/Microsoft/vsts-extension-color-control"
+            "uri": "https://github.com/osowskit/microsoft-github-app-extension"
         },
         "issues": {
-            "uri": "https://github.com/Microsoft/vsts-extension-color-control/issues"
+            "uri": "https://github.com/osowskit/microsoft-github-app-extension/issues"
         }
     },
     "files": [
         {
             "path": "img",
-            "addressable": true
-        },
-        {
-            "path": "dist",
-            "addressable": true
-        },
-        {
-            "path": "scripts",
-            "addressable": true
-        },
-        {
-            "path": "styles",
             "addressable": true
         },
         {
@@ -71,45 +59,14 @@
         {
             "id": "color-control-contribution",
             "type": "ms.vss-work-web.work-item-form-control",
-            "description": "Add custom colors and labels for picklist fields.",
+            "description": "Create GitHub branch VSTS",
             "targets": [
                 "ms.vss-work-web.work-item-form"
             ],
             "properties": {
-                "name": "Color picklist control",
-                "uri": "index.html",
-                "height": 90,
-                "inputs": [
-                    {
-                        "id": "FieldName",
-                        "name": "Select the field for this control. Example: Priority",
-                        "description": "The field must have allowed values.",
-                        "type": "WorkItemField",
-                        "properties": {
-                            "workItemFieldTypes": ["String", "Integer"]
-                        },
-                        "validation": {
-                            "dataType": "String",
-                            "isRequired": true
-                        }
-                    },
-                    {
-                        "id": "Labels",
-                        "name": "Choose labels for each value. Example: Critical;Normal;Low",
-                        "validation": {
-                            "dataType": "String",
-                            "isRequired": false
-                        }
-                    },
-                    {
-                        "id": "Colors",
-                        "name": "Choose colors for each value. Example: Red;Blue;Green",
-                        "validation": {
-                            "dataType": "String",
-                            "isRequired": false
-                        }
-                    }
-                ]
+                "name": "GitHub Branch Selector",
+                "uri": "https://microsoft-github-app-extension.herokuapp.com/main_entry",
+                "height": 90
             }
         }
     ]
